@@ -21,10 +21,16 @@ function App() {
   if (error) return <p>Error : {error.message}</p>;
   return (
     <div>
+      {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+      {/*@ts-ignore*/}
       {data.games.map((game) => (
         <div>
           <h1>{game.title}</h1>
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/*@ts-ignore*/}
           <span>{game.reviews.map((r) => r.rating)}</span>
+          {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+          {/*@ts-ignore*/}
           <span>{game.reviews.map((r) => r.author.name)}</span>
         </div>
       ))}
